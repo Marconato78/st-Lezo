@@ -3,43 +3,56 @@ import streamlit as st
 # Configuración de la página
 st.set_page_config(page_title="Blas de Lezo - El Mediohombre", page_icon="⚓", layout="wide")
 
-# Estilos CSS personalizados
+# Estilos CSS personalizados para Modo Oscuro
 st.markdown("""
 <style>
+    /* Forzar fondo oscuro para toda la app */
+    .stApp {
+        background-color: #0e1117;
+        color: #ffffff;
+    }
     .main-title {
         font-family: 'Georgia', serif;
-        color: #002855;
+        color: #ffffff;
         font-size: 3rem;
         font-weight: bold;
         margin-bottom: 0px;
     }
     .subtitle {
-        color: #64748b;
+        color: #cbd5e1;
         font-size: 1.5rem;
         margin-bottom: 2rem;
     }
     .section-title {
-        color: #002855;
-        border-bottom: 3px solid #d4af37;
+        color: #ffffff;
+        border-bottom: 3px solid #d4af37; /* Acento dorado */
         padding-bottom: 5px;
         margin-top: 2rem;
     }
     .quote-box {
-        background-color: #f8fafc;
+        background-color: #1e293b; /* Fondo recuadro oscuro */
         border-left: 6px solid #d4af37;
         padding: 20px;
         font-style: italic;
         font-size: 1.5rem;
-        color: #334155;
+        color: #ffffff;
         margin: 2rem 0;
     }
     .card {
-        background-color: #f1f5f9;
+        background-color: #1e293b; /* Fondo tarjeta oscura */
         padding: 20px;
         border-radius: 10px;
-        border-top: 5px solid #002855;
+        border-top: 5px solid #d4af37;
         text-align: center;
         height: 100%;
+        color: #ffffff !important;
+    }
+    .card p, .card h4 {
+        color: #ffffff !important;
+    }
+    /* Asegurar que los textos generales sean blancos */
+    p, li, .stMarkdown {
+        color: #ffffff !important;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -63,7 +76,7 @@ with tab1:
         A lo largo de su carrera, protegió las rutas comerciales del Imperio, luchó contra piratas en el Mar del Sur (Pacífico) y lideró la reconquista de Orán (1732).
         """)
     with col2:
-        # Imagen real obtenida de Wikipedia Commons
+        # Imagen de Wikimedia
         st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Blas_de_Lezo.jpg/800px-Blas_de_Lezo.jpg", caption="Retrato de Blas de Lezo", use_container_width=True)
 
 with tab2:
@@ -75,7 +88,7 @@ with tab2:
     with c1:
         st.markdown("""
         <div class="card">
-            <h3 style="color:#d4af37; font-size:3rem;">🦵</h3>
+            <h3 style="color:#d4af37; font-size:3rem; margin-bottom:0px;">🦵</h3>
             <h4>La Pierna Izquierda</h4>
             <p><strong>Batalla de Vélez-Málaga (1704):</strong> A los 15 años, una bala de cañón le destrozó la pierna. Le fue amputada por debajo de la rodilla sin anestesia, soportando la cirugía sin proferir una queja.</p>
         </div>
@@ -84,7 +97,7 @@ with tab2:
     with c2:
         st.markdown("""
         <div class="card">
-            <h3 style="color:#d4af37; font-size:3rem;">👁️</h3>
+            <h3 style="color:#d4af37; font-size:3rem; margin-bottom:0px;">👁️</h3>
             <h4>El Ojo Izquierdo</h4>
             <p><strong>Asedio de Tolón (1707):</strong> Una esquirla de cañón impactó en su rostro, haciéndole perder la visión del ojo izquierdo por completo.</p>
         </div>
@@ -93,7 +106,7 @@ with tab2:
     with c3:
         st.markdown("""
         <div class="card">
-            <h3 style="color:#d4af37; font-size:3rem;">💪</h3>
+            <h3 style="color:#d4af37; font-size:3rem; margin-bottom:0px;">💪</h3>
             <h4>El Brazo Derecho</h4>
             <p><strong>Sitio de Barcelona (1714):</strong> Recibió un balazo en el antebrazo derecho que le rompió tendones y huesos, dejándolo sin movilidad en el brazo para el resto de su vida.</p>
         </div>
