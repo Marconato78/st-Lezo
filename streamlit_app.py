@@ -76,8 +76,9 @@ with tab1:
         A lo largo de su carrera, protegió las rutas comerciales del Imperio, luchó contra piratas en el Mar del Sur (Pacífico) y lideró la reconquista de Orán (1732).
         """)
     with col2:
-        # Imagen de Wikimedia
-        st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Blas_de_Lezo.jpg/800px-Blas_de_Lezo.jpg", caption="Retrato de Blas de Lezo", use_container_width=True)
+        # Imagen real obtenida del Museo Naval a través de Wikimedia
+        st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Don_Blas_de_Lezo_-Museo_Naval-.jpg/960px-Don_Blas_de_Lezo_-Museo_Naval-.jpg", caption="Retrato de Blas de Lezo (Museo Naval)", use_container_width=True)
+
 
 with tab2:
     st.markdown('<h2 class="section-title">El Origen de su Apodo: "El Mediohombre"</h2>', unsafe_allow_html=True)
