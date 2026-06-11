@@ -1,135 +1,72 @@
 # st-Lezo
 
-Aplicación web desarrollada con **Streamlit** para conmemorar la vida, las hazañas militares y el legado histórico del almirante español **Blas de Lezo y Olavarrieta**.
+Aplicación web desarrollada con **Streamlit**.
 
-Conocido como *"Patapalo"* o *"Mediohombre"* debido a las numerosas heridas sufridas en combate, Blas de Lezo es una de las figuras más destacadas de la historia naval española. Su mayor logro fue la defensa de **Cartagena de Indias** en 1741 frente a una enorme flota británica.
+## Descripción
 
-La aplicación actúa como un repositorio histórico interactivo que utiliza tecnologías web modernas para presentar información biográfica, estadísticas militares y el legado cultural del almirante.
+Este proyecto consiste en una aplicación web implementada mediante el framework Streamlit. La aplicación está estructurada como una solución ligera de una sola página, utilizando un único archivo Python para gestionar la configuración, el diseño visual, la navegación y la presentación de contenido.
 
----
-
-## Características
-
-* 📜 Información histórica sobre la vida de Blas de Lezo.
-* ⚔️ Datos sobre la defensa de Cartagena de Indias.
-* 📊 Comparativas visuales de fuerzas militares.
-* 🖼️ Integración de imágenes y retratos históricos.
-* 🌙 Interfaz personalizada con temática oscura inspirada en museos históricos.
-* 📑 Navegación organizada mediante pestañas interactivas.
+La arquitectura aprovecha el modelo de ejecución reactivo de Streamlit para actualizar dinámicamente la interfaz de usuario.
 
 ---
 
-## Contexto Histórico
+## Arquitectura
 
-El objetivo principal de la aplicación es divulgar uno de los episodios más importantes de la historia militar española:
-
-### Sitio de Cartagena de Indias (1741)
-
-Blas de Lezo logró defender la ciudad de Cartagena de Indias con:
-
-* **3.000 soldados**
-* **6 barcos**
-
-frente a una fuerza británica compuesta por:
-
-* **27.000 hombres**
-* **186 barcos**
-
-La aplicación destaca algunas de las estrategias que hicieron posible esta victoria:
-
-* Hundimiento estratégico de barcos para bloquear los canales de acceso.
-* Aprovechamiento de la geografía defensiva de la bahía.
-* Desgaste del enemigo mediante enfermedades tropicales y condiciones climáticas adversas.
-* Coordinación eficiente de recursos extremadamente limitados.
-
----
-
-## Arquitectura de la Aplicación
-
-El proyecto está implementado como una aplicación Streamlit de un único archivo:
+La aplicación sigue una arquitectura simple basada en un único archivo principal:
 
 ```text
 streamlit_app.py
 ```
 
-Este archivo gestiona:
+Responsabilidades principales:
 
 * Configuración de la aplicación.
-* Estilos personalizados.
-* Estructura de navegación.
-* Presentación del contenido histórico.
-* Visualización de métricas e imágenes.
-
-La arquitectura aprovecha el modelo de ejecución reactivo de Streamlit para actualizar dinámicamente la interfaz.
+* Personalización de estilos mediante CSS.
+* Definición de la estructura de navegación.
+* Renderizado de componentes visuales.
+* Gestión del flujo de ejecución de Streamlit.
 
 ---
 
-## Estructura de la Interfaz
+## Características Técnicas
 
-### Sistema de Temas
+### Personalización Visual
 
-La aplicación utiliza una estrategia de inyección de CSS personalizada para reemplazar los estilos predeterminados de Streamlit.
+La interfaz utiliza inyección de CSS personalizada para sobrescribir los estilos predeterminados de Streamlit.
 
-Características visuales:
+Características implementadas:
 
-| Elemento        | Color                         |
-| --------------- | ----------------------------- |
-| Fondo principal | `#0e1117`                     |
-| Acentos dorados | `#d4af37`                     |
-| Estilo general  | Temática histórica tipo museo |
+* Tema oscuro personalizado.
+* Colores de acento definidos mediante CSS.
+* Ajustes de tipografía y presentación visual.
+* Estilización de componentes nativos de Streamlit.
 
-### Navegación por Pestañas
+---
 
-El contenido está dividido en cuatro secciones principales mediante:
+### Navegación
+
+La aplicación organiza la información mediante pestañas utilizando:
 
 ```python
 st.tabs()
 ```
 
-Esto permite una navegación clara entre los distintos aspectos de la vida y legado del almirante.
+Este enfoque permite dividir la interfaz en secciones independientes manteniendo una experiencia de usuario sencilla.
 
 ---
 
-## Componentes Principales
+### Componentes Utilizados
 
-### 1. Información Histórica
-
-Presenta:
-
-* Biografía de Blas de Lezo.
-* Principales campañas militares.
-* Logros estratégicos.
-* Legado histórico.
-
----
-
-### 2. Visualización de Datos
-
-La aplicación utiliza:
+Entre los componentes principales empleados se encuentran:
 
 ```python
+st.tabs()
 st.metric()
-```
-
-para mostrar comparativas numéricas que evidencian la enorme desventaja de las fuerzas españolas durante la defensa de Cartagena de Indias.
-
-Ejemplos:
-
-* Número de soldados.
-* Número de barcos.
-* Relación de fuerzas entre ambos bandos.
-
----
-
-### 3. Contenido Multimedia
-
-Las imágenes históricas se integran mediante:
-
-```python
 st.image()
+st.markdown()
 ```
 
-permitiendo mostrar retratos y material gráfico relacionado con el almirante.
+Estos componentes permiten construir interfaces interactivas sin necesidad de frameworks frontend adicionales.
 
 ---
 
@@ -145,11 +82,11 @@ st-Lezo/
 
 ### Archivos principales
 
-| Archivo            | Descripción                    |
-| ------------------ | ------------------------------ |
-| `streamlit_app.py` | Aplicación principal Streamlit |
-| `README.md`        | Documentación del proyecto     |
-| `.python-version`  | Versión de Python utilizada    |
+| Archivo            | Descripción                                                |
+| ------------------ | ---------------------------------------------------------- |
+| `streamlit_app.py` | Aplicación principal                                       |
+| `README.md`        | Documentación del proyecto                                 |
+| `.python-version`  | Versión de Python utilizada para garantizar compatibilidad |
 
 ---
 
@@ -162,46 +99,40 @@ st-Lezo/
 
 ## Instalación
 
-### 1. Clonar el repositorio
+### Clonar el repositorio
 
 ```bash
 git clone https://github.com/usuario/st-Lezo.git
 cd st-Lezo
 ```
 
-### 2. Crear entorno virtual (opcional)
-
-```bash
-python -m venv .venv
-```
-
-Activar:
+### Crear entorno virtual (opcional)
 
 **Windows**
 
 ```bash
+python -m venv .venv
 .venv\Scripts\activate
 ```
 
 **Linux/macOS**
 
 ```bash
+python -m venv .venv
 source .venv/bin/activate
 ```
 
-### 3. Instalar dependencias
+### Instalar dependencias
 
 ```bash
 pip install streamlit
 ```
 
-o bien:
+o:
 
 ```bash
 pip install -r requirements.txt
 ```
-
-si existe un archivo de requisitos.
 
 ---
 
@@ -213,13 +144,11 @@ Iniciar la aplicación localmente:
 streamlit run streamlit_app.py
 ```
 
-Una vez iniciada, Streamlit mostrará una URL similar a:
+Por defecto, Streamlit expondrá la aplicación en:
 
 ```text
 http://localhost:8501
 ```
-
-Abrirla en el navegador para acceder a la aplicación.
 
 ---
 
@@ -227,19 +156,18 @@ Abrirla en el navegador para acceder a la aplicación.
 
 * Python
 * Streamlit
-* HTML/CSS personalizado
+* CSS personalizado
 
 ---
 
-## Objetivo Educativo
+## Consideraciones de Compatibilidad
 
-Este proyecto busca acercar al público la figura de Blas de Lezo mediante una experiencia interactiva y visual, facilitando la comprensión de uno de los episodios más relevantes de la historia naval española.
+El proyecto incluye un archivo `.python-version` para fijar la versión de Python y asegurar un comportamiento consistente entre entornos de desarrollo y despliegue.
 
----
+La aplicación no requiere:
 
-## Referencias
+* Frameworks JavaScript externos.
+* Bases de datos.
+* Servidores backend adicionales.
 
-* Blas de Lezo y Olavarrieta
-* Sitio de Cartagena de Indias (1741)
-* Historia Naval Española
-* Streamlit
+Todo el procesamiento y renderizado se realiza mediante Streamlit.
