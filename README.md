@@ -172,3 +172,9 @@ La aplicación no requiere:
 * Servidores backend adicionales.
 
 Todo el procesamiento y renderizado se realiza mediante Streamlit.
+
+---
+
+## Licencia
+
+Este proyecto puede utilizarse como plantilla base para aplicaciones analíticas desarrolladas con Streamlit.
